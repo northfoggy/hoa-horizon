@@ -1,0 +1,502 @@
+/**
+ * HOA Horizon Admin Styles
+ * 
+ * CSS for the front-end admin pages and homepage builder interface
+ */
+
+/* Base Admin Styles - Preserve your existing styles */
+.hoa-horizon-admin-wrap {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.hoa-horizon-admin-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.hoa-horizon-admin-header h1 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.hoa-horizon-admin-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+.hoa-horizon-admin-nav li {
+    margin: 0;
+}
+
+.hoa-horizon-admin-nav a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #0073aa;
+}
+
+.hoa-horizon-admin-nav a.active,
+.hoa-horizon-admin-nav a:hover {
+    background: #f5f5f5;
+    color: #005177;
+    border-bottom: 2px solid #0073aa;
+}
+
+.hoa-horizon-admin-content {
+    padding: 20px 0;
+}
+
+.hoa-horizon-section {
+    margin-bottom: 20px;
+}
+
+.hoa-horizon-section h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.button {
+    background: #0073aa;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background: #005177;
+}
+
+.button-secondary {
+    background: #f7f7f7;
+    color: #555;
+    border: 1px solid #ccc;
+}
+
+.button-secondary:hover {
+    background: #f0f0f0;
+    color: #23282d;
+}
+
+.success, 
+.hoa-success-message {
+    color: #155724;
+    background: #d4edda;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.error {
+    color: #721c24;
+    background: #f8d7da;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Homepage Builder Styles */
+
+.hoa-homepage-builder {
+    margin-bottom: 40px;
+}
+
+.hoa-builder-intro {
+    margin-bottom: 20px;
+}
+
+.hoa-editor-layout {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hoa-editor-sidebar {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.hoa-editor-main {
+    flex: 2;
+    min-width: 450px;
+}
+
+.editor-panel {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.editor-panel h3 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Block Palette */
+.hoa-block-palette {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.block-item {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    cursor: grab;
+    transition: all 0.2s;
+}
+
+.block-item:hover {
+    background: #f0f0f0;
+    border-color: #0073aa;
+}
+
+.block-item.dragging {
+    opacity: 0.5;
+    border: 2px dashed #0073aa;
+}
+
+.block-icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #0073aa;
+}
+
+.block-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Layout Preview */
+.hoa-layout-preview {
+    min-height: 300px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.preview-header {
+    width: 100%;
+    background-color: #eee;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.preview-header .placeholder-text {
+    color: #888;
+    font-style: italic;
+}
+
+.preview-header.has-image .placeholder-text {
+    display: none;
+}
+
+.hoa-sortable-blocks-container {
+    display: grid;
+    gap: 15px;
+    min-height: 100px;
+}
+
+.hoa-layout-preview[data-items-per-row="1"] .hoa-sortable-blocks-container {
+    grid-template-columns: 1fr;
+}
+
+.hoa-layout-preview[data-items-per-row="2"] .hoa-sortable-blocks-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.hoa-layout-preview[data-items-per-row="3"] .hoa-sortable-blocks-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.hoa-layout-preview[data-items-per-row="4"] .hoa-sortable-blocks-container {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.layout-empty-state {
+    grid-column: 1 / -1;
+    padding: 30px;
+    text-align: center;
+    background: #fff;
+    border: 2px dashed #ddd;
+    border-radius: 4px;
+    color: #888;
+}
+
+.preview-block {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.preview-block.ui-sortable-helper {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.preview-block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+.block-title {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.block-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.block-controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.block-controls button:hover {
+    background: #eee;
+    color: #333;
+}
+
+.preview-block-content {
+    padding: 15px;
+    min-height: 50px;
+}
+
+/* Theme Options */
+.theme-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.theme-option {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.theme-option:hover {
+    border-color: #0073aa;
+}
+
+.theme-option.selected {
+    border-color: #0073aa;
+    background-color: rgba(0, 115, 170, 0.05);
+}
+
+.theme-option label {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+}
+
+.theme-preview {
+    width: 80px;
+    height: 50px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+}
+
+.light-theme {
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
+}
+
+.dark-theme {
+    background: linear-gradient(to bottom, #2c3e50 0%, #34495e 100%);
+}
+
+/* Preset Options */
+.preset-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.preset-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.preset-button:hover {
+    background: #f0f0f0;
+    border-color: #0073aa;
+}
+
+.preset-icon {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #0073aa;
+}
+
+/* Form Actions */
+.form-actions {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+}
+
+/* Media Uploader */
+.media-uploader-wrap {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.header-image-preview {
+    margin-top: 10px;
+}
+
+.header-image-preview img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    width: 80px;
+    margin-bottom: 0;
+}
+
+.input-group input {
+    width: 100px !important;
+}
+
+/* Modal Styles */
+.block-config-modal {
+    display: none;
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #0073aa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hoa-editor-layout {
+        flex-direction: column;
+    }
+    
+    .hoa-editor-sidebar {
+        max-width: 100%;
+    }
+    
+    .hoa-layout-preview[data-items-per-row] .hoa-sortable-blocks-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+}
